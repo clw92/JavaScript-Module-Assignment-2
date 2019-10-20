@@ -1,0 +1,61 @@
+//MODULE ASSIGNMENT 2 - LEVEL 1
+
+1. What is a function literal?
+
+Function literals creates function objects. The function literal is the value of a function. 
+
+A function literal is an unnamed function. 
+
+2. What is the constructor?
+
+Instead of repeating the same code over and over again, you can make a constructor. The constructor is used to make new objects in a much faster way. For instance: 
+
+var person1 = {
+name: "Tom",
+age: 27,
+from: "Norway"
+};
+
+var person2 = {
+name: "Jane",
+age: 33,
+from: "England"
+};
+
+var person3 = {
+name: "Jake",
+age: 19,
+from: "USA"
+};
+
+With a constructor this becomes much more convenient:
+
+function Person (name, age, from) {
+this.name = name;
+this.age = age;
+this.from = from;
+}
+
+var person1 = new Person ("Tom", 27, "Norway");
+var person2 = new Person ("Jane", 33, "England");
+var person3 = new Person ("Jake", 19, "USA");
+
+The keyword new is very important, telling javascript to look for the constructor with the name Person, making a new object. 
+
+3. What does the return statement do?
+
+The return statement ends the execution og the function. The function caller will get returned a specific value. 
+
+4. What will be written to the console from this function:
+		function myFunction(){
+			  return console.log('inside my function');
+			  console.log('My name is Andy');
+		}
+		myFunction();
+
+The answer will be "inside my function".
+
+
+5. Briefly describe scope in JavaScript.
+
+There are two different types of scope in javaScript. Local and global scope. Variables inside a function can not be accessed from outside the scope. A variable outside of a function is in global scope, and all functions and scripts on a webpage can access it. 
